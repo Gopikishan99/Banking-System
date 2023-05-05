@@ -1,4 +1,3 @@
-
 import java.text.*;
 import java.util.*;
 
@@ -7,25 +6,22 @@ public class BankController
 {
     public static void main(String[] args)
     {
-        Scanner sc=new Scanner(System.in);//for input support
+        Scanner sc=new Scanner(System.in);
 
-        ArrayList<User> table=new ArrayList<>();//storing user objects
-        DateFormat df=new SimpleDateFormat("dd/MM/yy HH:mm:ss");//Date-time format
+        ArrayList<User> table=new ArrayList<>();
+        DateFormat df=new SimpleDateFormat("dd/MM/yy HH:mm:ss");
         try
         {
-            //use this dummy data for testing
-            table.add(new User(14523698,"Elon Musk",1289,50000000));
-            table.add(new User(78549632,"Donald Trump",2526,39999990));
-            table.add(new User(54856947,"Steve Jobs",9398,35000990));
+           
             table.add(new User(11455587,"Sachin Tendulkar",8612,9008800));
             table.add(new User(99676898,"Rahul Gandhi",1234,0));
             table.add(new User(41212455,"Alex Morton",1279,5800000));
-            table.add(new User(48963689,"Amitabh Bacchan",2526,785000));
-            table.add(new User(55454899,"Arnab Goswami",9398,3880990));
-            table.add(new User(78333588,"Mamta Banerjee",8612,900));
-
-            System.out.println("\n***************************************");
-            System.out.println("    WELCOME TO STATE BANK OF INDIA\n");
+            table.add(new User(14523698,"Elon Musk",1289,50000000));
+            table.add(new User(78549632,"Donald Trump",2526,39999990));
+            table.add(new User(54856947,"Steve Jobs",9398,35000990));
+            
+            System.out.println("\n**********************************");
+            System.out.println("   WELCOME TO STATE BANK OF INDIA\n");
             while(true)
             {
                 System.out.println("________________________________________");
@@ -35,7 +31,7 @@ public class BankController
 
                 int acc,c,found=0,pin,op;
                 double amt;
-                User active=null;//stores the active user object
+                User active=null;
                 c=sc.nextInt();
                 switch(c)
                 {
@@ -155,16 +151,16 @@ public class BankController
                                           System.out.println("\n<Session ended at "+df.format(new Date())+">\n");
                                           System.exit(0);
                                    default:System.out.println("\n!!WRONG CHOICE!!\nPress between 1 to 5");
-                               }//end of inner switch
-                           }//end of inner while
+                               }
+                           }
                     default:System.out.println("\n!!WRONG CHOICE!!\nPress between 1 to 2");
-                }//end of outer switch
-            }//end of outer while
-        }//end of try block
+                }
+            }
+        }
         catch (Exception e)
         {
             System.out.println("\n     !!WARNING!!\nPlease use correct input format");
             System.out.println("\n<Session Expired at "+df.format(new Date())+">\n");
-        }//end of catch block
-    }//end of main
-}//end of class
+        }
+    }
+}
