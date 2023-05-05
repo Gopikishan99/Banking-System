@@ -1,7 +1,6 @@
 import java.text.*;
 import java.util.*;
 
-//controller part
 public class BankController
 {
     public static void main(String[] args)
