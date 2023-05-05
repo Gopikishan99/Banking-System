@@ -1,4 +1,4 @@
-//data base of users
+
 public class User
 {
     private int account_id;
